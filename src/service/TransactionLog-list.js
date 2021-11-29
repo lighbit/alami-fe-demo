@@ -61,7 +61,7 @@ class TransactionUserList extends React.Component {
         var { data, money } = this.state
         var balance = "0"
         var last_calibrate = moment(new Date()).format('MM/DD/YYYY HH:MM:SS')
-        if (money[0].amount != null) {
+        if (money != undefined && money.length > 0) {
             balance = 'Rp. ' + parseInt(money[0].amount).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
             last_calibrate = moment(money[0].last_calibrate).format('MM/DD/YYYY HH:MM:SS');
         }

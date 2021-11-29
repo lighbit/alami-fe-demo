@@ -9,16 +9,6 @@ import CheckButton from "react-validation/build/button";
 import AuthTransaction from "./auth/auth-transaction-log";
 import AuthCustomer from "./auth/auth-user";
 
-const required = (value) => {
-    if (!value) {
-        return (
-            <div className="alert alert-danger" role="alert">
-                This field is required!
-            </div>
-        );
-    }
-};
-
 class Transaction extends Component {
     constructor(props) {
         super(props);
